@@ -3,5 +3,4 @@ function setWrapperMargin (wrapper, footer) {
     let footerNode = document.querySelector(footer);
 
     wrapperNode.style.marginBottom = `${footerNode.clientHeight}px`;
-    console.log(window);
 }

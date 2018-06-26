@@ -56,15 +56,17 @@
 }
 
 .contacts--footer-md {
-    text-align: right;
-    .contacts__tel, .contacts__req-call {
-        display: block;
-        margin: 0;
-    }
-    .contacts__tel {
-        margin-bottom: 10px;
-    }
-    .contacts__req-call {
-        display: inline-block;
-    }
+	@media screen and (max-width: $desktop-break) {
+        text-align: right;
+		.contacts__tel, .contacts__req-call {
+			display: block;
+			margin: 0;
+		}
+		.contacts__tel {
+			margin-bottom: 10px;
+		}
+		.contacts__req-call {
+			display: inline-block;
+		}
+	}
 }

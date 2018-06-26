@@ -9,7 +9,7 @@
 
 .site-footer__top {
     @include flex($jc: sb, $ai: c);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     @media screen and (max-width: $tablet-break) {
         margin-bottom: 20px;
         justify-content: center;
@@ -98,7 +98,7 @@
 }
 
 .site-footer__social-md {
-    display: block;
+    display: flex;
     @media screen and (max-width: $tablet-break) {
         display: none;
     }
