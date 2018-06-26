@@ -13,3 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector(".form-free__input").addEventListener("input", mask, false);
 });
+
+window.addEventListener("resize", function () {
+    setWrapperMargin(".page__wrapper",".site-footer");
+});
