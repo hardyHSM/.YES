@@ -164,7 +164,7 @@ gulp.task('svgmin', function () {
 gulp.task('imgmin', function () {
      return gulp.src([config.app + config.img +'/**/*.*', '!' + config.app + config.img + config.svg.src + '/**/*.svg'])
      	.pipe(tinypng({
-            key: '-OXgMfNWMlu26BGGLEXrpvYf6VpkRi8E',
+            key: 'BrVMnlgLyDS7n8vbkZFKCGHav7jzVzli',
             log: true
         }))
         .pipe(gulp.dest(config.build + config.img +'/'))
