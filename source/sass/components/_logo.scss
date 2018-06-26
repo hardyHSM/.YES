@@ -1,0 +1,18 @@
+.site-logo {
+    font-size: rem(48);
+    font-family: $accent-font;
+    @media screen and (max-width: $desktop-break) {
+		font-size: rem(30);
+	}
+}
+
+.site-logo__dot {
+    color: $black-color;
+    display: inline-block;
+}
+
+.site-logo__accent {
+    color: $accent-color;
+    display: inline-block;
+    text-transform: uppercase;
+}

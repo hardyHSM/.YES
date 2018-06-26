@@ -1,0 +1,74 @@
+.free {
+    position: relative;
+    background-image: url('../../img/bg/free.png');
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: 14% 50%;
+    padding-top: 185px;
+    padding-bottom: 185px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 200px;
+        right: 50%;
+        background-image: url('../img/decor/wave.png');
+        width: 147px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @media screen and (max-width: $desktop-break) {
+            top: 140px;
+        }
+        @media screen and (max-width: $tablet-break) {
+            top: 190px;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        background-size: 79%;
+        background-position: -117%;
+    }
+    @media screen and (max-width: $tablet-break) {
+        padding-top: 290px;
+        padding-bottom: 125px;
+        text-align: center;
+        background-position: center top;
+        background-size: 100%;
+    }
+}
+
+.free__content {
+    width: 445px;
+    margin-left: auto;
+    @media screen and (max-width: $desktop-break) {
+        width: 325px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        width: 100%;
+    }
+}
+
+.free__title {
+    font-size: rem(45);
+    font-family: $main-font_bold;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+    @media screen and (max-width: $desktop-break) {
+        font-size: rem(30);
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: rem(24);
+        margin-bottom: 19px;
+    }
+}
+
+.free__descr {
+    @include no-gutters;
+    margin-bottom: 100px;
+    @media screen and (max-width: $desktop-break) {
+        margin-bottom: 35px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 20px;
+    }
+}

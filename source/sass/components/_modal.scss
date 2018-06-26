@@ -1,0 +1,127 @@
+.page__modal {
+    max-width: 835px;
+    padding: 135px 140px;
+    background-color: $white-color;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    @media screen and (max-width: $desktop-break) {
+        padding: 75px 55px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        padding: 35px 25px;
+    }
+}
+
+.modal__close {
+    outline: none;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    width: 18px;
+    height: 18px;
+    text-indent: -9999;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        transform: rotate(50deg);
+        background-color: $black-color;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        transform: rotate(-50deg);
+        background-color: $black-color;
+    }
+    @media screen and (max-width: $desktop-break) {
+        right: 25px;
+        top: 25px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        right: 15px;
+        top: 15px;
+    }
+
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.modal--show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.page__overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba(0,0,0,0.58);
+    display: none;
+}
+
+.page__overlay--show {
+    display: block;
+}
+
+.modal-free {
+    text-align: center;
+}
+
+.modal-free__title {
+    font-size: rem(34);
+    text-transform: uppercase;
+    font-family: $main-font_bold;
+    @include no-gutters;
+    margin-bottom: 30px;
+    @media screen and (max-width: $desktop-break) {
+       font-size: rem(25) ;
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: rem(20);
+    }
+}
+
+.modal-free__descr {
+    font-size: rem(18);
+    font-family: $main-font;
+    @include no-gutters;
+    margin-bottom: 25px;
+    color: $dark-color;
+    @media screen and (max-width: $desktop-break) {
+        font-size: rem(16);
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: rem(14);
+    }
+}
+
+.form-free__input {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 25px 45px;
+    border-radius: 55px;
+    border: 1px solid $border-color;
+    color: $border-color;
+    &:focus {
+        outline: none;
+        border-color: darken($border-color, 10%);
+    }
+}

@@ -1,0 +1,19 @@
+.site-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media screen and (max-width: $tablet-break) {
+		padding-top: 20px;
+        padding-bottom: 20px;
+	}
+}
+
+
+.site-header__content {
+    @include flex($jc: sb, $ai: c);
+}
+
+.site-header__right {
+    @media screen and (max-width: $tablet-break) {
+		text-align: right;
+	}
+}

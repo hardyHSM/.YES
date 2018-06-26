@@ -1,0 +1,70 @@
+.contacts__adress, .contacts__tel, .contacts__req-call {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contacts__adress {
+    margin-right: 35px;
+    font-style: normal;
+    @media screen and (max-width: $desktop-break) {
+		margin-right: 25px;
+    }
+    @media screen and (max-width: $tablet-break) {
+		display: none;
+	}
+}
+
+.contacts__tel {
+    margin-right: 45px;
+    @media screen and (max-width: $desktop-break) {
+		margin-right: 25px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        margin-right: 0;
+        display: block;
+	}
+}
+
+.contacts__req-call {
+    color: $accent-color;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -4px;
+        left: 0;
+        background-color: $accent-color;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s;
+    }
+    &:hover {
+        text-decoration: none;
+        &::after {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.contacts__adress--desktop {
+    @media screen and (max-width: $desktop-break) {
+        display: none;
+    }
+}
+
+.contacts--footer-md {
+    text-align: right;
+    .contacts__tel, .contacts__req-call {
+        display: block;
+        margin: 0;
+    }
+    .contacts__tel {
+        margin-bottom: 10px;
+    }
+    .contacts__req-call {
+        display: inline-block;
+    }
+}

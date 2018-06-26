@@ -1,0 +1,192 @@
+.pasttime {
+    padding-top: 140px;
+    padding-bottom: 250px;
+    background-image: url('../img/pasttime/pasttime-bg.png');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @media screen and (max-width: $desktop-break) {
+        padding-bottom: 200px;
+        background-size: 183% 97%;
+        background-position: center center;
+    }
+    @media screen and (max-width: $tablet-break) {
+        padding-top: 80px;
+        padding-bottom: 90px;
+        text-align: center;
+        background-size: cover;
+    }
+}
+
+.pasttime__title {
+    margin-top: 0;
+    font-family: $main-font_bold;
+    text-transform: uppercase;
+    font-size: rem(45);
+    max-width: 355px;
+    @media screen and (max-width: $desktop-break) {
+        font-size: rem(30);
+        margin-bottom: 115px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+
+.pasttime__list {
+    @include reset-list;
+}
+
+.pasttime__item {
+    position: relative;
+    z-index: 10;
+    @include flex($wrap: nowrap,$jc: sb, $ai: c);
+    &::after {
+        position: absolute;
+        font-size: rem(122);
+        font-family: $main-font_bold;
+        color: $grey-pale-color;
+        z-index: -1;
+        @media screen and (max-width: $desktop-break) {
+            font-size: rem(72);
+        }
+        @media screen and (max-width: $tablet-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $tablet-break) {
+        display: block;
+        height: auto !important;
+        margin-bottom: 35px !important;
+    }
+}
+
+.pasttime__item--reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.pasttime__wrap {
+    padding-left: 70px;
+    @media screen and (max-width: $tablet-break) {
+        padding-left: 0;
+    }
+}
+
+.pasttime__item--easily {
+    height: 335px;
+    margin-bottom: 70px;
+    &::after {
+        content: "простое";
+        top: 25px;
+        left: 200px;
+    }
+    @media screen and (max-width: $desktop-break) {
+        height: 205px;
+    }
+}
+
+.pasttime__img {
+    @media screen and (max-width: $desktop-break) {
+        max-height: 100%;
+
+    }
+}
+
+.pasttime__item--comm {
+    height: 333px;
+    margin-bottom: 85px;
+    &::after {
+        content: "общение";
+        top: 20px;
+        right: 100px;
+    }
+    &::before {
+        content: "";
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        background-color: $accent-color--secondary;
+        border-radius: 50%;
+        left: 55px;
+        top: -42px;
+        @media screen and (max-width: $desktop-break) {
+            top: -325px;
+        }
+        @media screen and (max-width: $tablet-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        height: 210px;
+    }
+}
+
+.pasttime__item--prac {
+    height: 325px;
+    margin-bottom: 80px;
+    &::after {
+        content: "практика";
+        top: 20px;
+        left: 23px;
+    }
+    @media screen and (max-width: $desktop-break) {
+        height: 205px;
+    }
+}
+
+.pasttime__item--reiter {
+    height: 320px;
+    &::after {
+        content: "повтор";
+        top: 5px;
+        right: 182px;
+    }
+    &::before {
+        content: "";
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        background-image: url('../img/decor/circle.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 515px;
+        top: 0;
+        transform: translateY(-50%);
+        @media screen and (max-width: $desktop-break) {
+            width: 85px;
+            height: 85px;
+            left: 290px;
+        }
+        @media screen and (max-width: $tablet-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        height: 200px;
+    }
+}
+
+.pasttime__wrap {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 30px;
+        width: 13px;
+        height: 9px;
+        background-image: url('../img/decor/arrow.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.pasttime__waves {
+    position: absolute;
+    top: 36px;
+    right: -36px;
+    @media screen and (max-width: $desktop-break) {
+        display: none;
+    }
+}

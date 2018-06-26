@@ -1,0 +1,156 @@
+.site-intro {
+    padding-top: 210px;
+    padding-bottom: 188px;
+    background-image: url("../img/bg/bus.png");
+    background-repeat: no-repeat;
+    background-position: 27% -150%;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: $desktop-break) {
+        padding-top: 85px;
+        padding-bottom: 65px;
+        background-position: 2% 149%;
+        background-size: 41%;
+    }
+    @media screen and (max-width: $tablet-break) {
+        padding-top: 295px;
+        padding-bottom: 85px;
+        background-position: 50% -70px;
+        background-size: 290px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: $accent-color--secondary;
+        border-radius: 50%;
+        right: 50px;
+        top: 50px;
+    }
+}
+
+.site-intro__slogan {
+    position: absolute;
+    @include left-align();
+    top: 0;
+    font-family:  $main-font_bold;
+    color: rgba($black-color, .03);
+    font-size: rem(372px);
+    white-space: nowrap;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background-image: url('../../img/decor/circle.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 14%;
+        top: 290px;
+        @media screen and (max-width: $desktop-break) {
+            left: -25px;
+            top: 50%;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        background-color: $accent-color--secondary;
+        border-radius: 50%;
+        right: 27%;
+        top: 28%;
+        @media screen and (max-width: $desktop-break) {
+            right: 31%;
+            top: 5%;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+		font-size: rem(240);
+    }
+    @media screen and (max-width: $tablet-break) {
+        display: none;
+    }
+ }
+
+
+.site-intro__content {
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    @media screen and (max-width: $desktop-break) {
+		max-width: 405px;
+	}
+}
+
+.site-intro__title {
+    @extend .no-gutters;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    font-size: rem(45);
+    font-family:  $main-font_bold;
+    text-transform: uppercase;
+    position: relative;
+    small {
+        display: block;
+        font-size: rem(34);
+        @media screen and (max-width: $desktop-break) {
+            font-size: rem(24);
+        }
+        @media screen and (max-width: $tablet-break) {
+            font-size: rem(18);
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+		font-size: rem(30);
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: rem(24);
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        background-image: url('../img/decor/circle.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        left: 0;
+        top: -120px;
+    }
+}
+
+.site-intro__annotation {
+    max-width: 404px;
+    color: $dark-color;
+    @extend .no-gutters;
+    margin-bottom: 100px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: -45px;
+        bottom: -48px;
+        background-image: url('../img/decor/wave.png');
+        width: 147px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @media screen and (max-width: $tablet-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+		margin-bottom: 75px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+

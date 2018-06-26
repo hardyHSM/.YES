@@ -1,0 +1,273 @@
+.situation {
+    background-image: url(../img/situation/situation-bg.png);
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 176px;
+    padding-bottom: 215px;
+    @media screen and (max-width: $desktop-break) {
+        padding-bottom: 150px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        background-size: cover;
+        text-align: center;
+        background-image: url(../img/pasttime/pasttime-bg.png);
+        background-position: center center;
+        text-align: center;
+        padding-bottom: 90px;
+    }
+}
+
+.situation__title {
+    font-family:  $main-font_bold;
+    font-size: rem(45);
+    text-transform: uppercase;
+    color: $black-color;
+    position: relative;
+    max-width: 355px;
+    @extend .no-gutters;
+    &::after {
+        content: "?";
+        font-size:  rem(300);
+        opacity: 0.09;
+        position: absolute;
+        top: -99px;
+        right: -58px;
+        @media screen and (max-width: $desktop-break) {
+            font-size: rem(200);
+            top: -54px;
+            right: -40px;
+        }
+        @media screen and (max-width: $tablet-break) {
+            top: -71px;
+            right: -23px;;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        font-size: rem(30);
+        max-width: 235px;
+    }
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 65px;
+        font-size: rem(24);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 190px;
+    }
+}
+
+.situation__list {
+    @include reset-list;
+}
+
+.situation__item {
+    @include flex($wrap: nowrap, $jc: flex-end, $ai: c);
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: $desktop-break) {
+        justify-content: space-between;
+    }
+    @media screen and (max-width: $tablet-break) {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 60px;
+        position: relative;
+        margin-bottom: 35px !important;
+    }
+}
+
+.situation__item--reverse {
+    flex-direction: row-reverse;
+    .situation__order {
+        right: -25px;
+        left: auto;
+    }
+    @media screen and (max-width: $desktop-break) {
+        justify-content: flex-end;
+        .situation__subtitle {
+            padding-left: 30px;
+            @media screen and (max-width: $tablet-break) {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.situation__subtitle {
+    @extend .no-gutters;
+    padding: 35px;
+    color: $dark-color--primary;
+    font-family:  $main-font;
+    line-height: 1.5;
+    @media screen and (max-width: $desktop-break) {
+        padding: 0;
+        margin-bottom: 25px;
+    }
+}
+
+.situation__wrap {
+    position: relative;
+    @media screen and (max-width: $tablet-break) {
+        position: static;
+    }
+}
+
+.situation__pic {
+    @media screen and (max-width: $tablet-break) {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+.situation__order {
+    white-space: nowrap;
+    position: absolute;
+    left: -25px;
+    font-size: rem(48);
+    font-family: $main-font_bold;
+    color: $black-color;
+    &::after {
+        content: ".";
+        font-family: $main-font_bold;
+        position: absolute;
+        color: $accent-color;
+    }
+    @media screen and (max-width: $tablet-break) {
+        position: absolute;
+        margin-top: 0px !important;
+        top: 0 !important;
+        right: auto !important;
+        left: 50% !important;
+        @include left-align;
+    }
+}
+
+.situation__item--first {
+    position: relative;
+    margin-bottom: 90px;
+    .situation__order {
+        top: 60px;
+    }
+    .situation__pic {
+        width: 455px;
+        @media screen and (max-width: $desktop-break) {
+            width: 405px;
+        }
+    }
+    &::after {
+        content: "";
+        top: 270px;
+        right: 430px;
+        position: absolute;
+        background-image: url('../img/decor/wave.png');
+        width: 147px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @media screen and (max-width: $desktop-break) {
+            top: 260px;
+            right: 350px;
+        }
+        @media screen and (max-width: $tablet-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        margin-bottom: 60px;
+    }
+}
+
+.situation__item--second {
+    position: relative;
+    .situation__order {
+        top: 30px;
+    }
+    .situation__pic {
+        width: 430px;
+        @media screen and (max-width: $desktop-break) {
+            width: 345px;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 455px;
+        left: 280px;
+        top: 100%;
+        background-color: $grey-pale-color;
+        @media screen and (max-width: $desktop-break) {
+            display: none;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 340px;
+        left: 280px;
+        bottom: 100%;
+        background-color: $grey-pale-color;
+        @media screen and (max-width: $desktop-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        margin-bottom: 65px;
+    }
+}
+
+.situation__item--third {
+    position: relative;
+    margin-top: -65px;
+    .situation__order {
+        margin-top: 142px;
+    }
+    .situation__pic {
+        width: 344px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 280px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        top: 155px;
+        width: 25px;
+        height: 25px;
+        background-color: $accent-color--secondary;
+        @media screen and (max-width: $desktop-break) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $desktop-break) {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+
+.situation__item--last {
+    .situation__subtitle {
+        padding-top: 85px;
+    }
+    .situation__pic {
+        width: 557px;
+        @media screen and (max-width: $desktop-break) {
+            width: 345px;
+        }
+    }
+    .situation__order {
+        top: 60px;
+        right: auto;
+        left: 95%;
+        &::after {
+            content: "...";
+            color: $black-color;
+        }
+        @media screen and (max-width: $desktop-break) {
+            top: 30px;
+        }
+    }
+}

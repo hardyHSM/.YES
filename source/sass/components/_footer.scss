@@ -1,0 +1,112 @@
+.site-footer {
+    background-color: $footer-color;
+    padding: 80px 0px;
+    @media screen and (max-width: $tablet-break) {
+        text-align: center;
+        padding: 55px 0px;
+    }
+}
+
+.site-footer__top {
+    @include flex($jc: sb, $ai: c);
+    margin-bottom: 25px;
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+}
+
+.social-list {
+    @include reset-list;
+    @include flex($ai: c);
+}
+
+.social__item {
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social__link {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.social__link_vk {
+    width: 40px;
+    height: 20px;
+    background-image: url('../img/social-list/vk.svg');
+}
+
+.social__link_inst {
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/social-list/insta.svg');
+}
+
+.social__link_youtube {
+    width: 28px;
+    height: 35px;
+    background-image: url('../img/social-list/youtube.svg');
+}
+
+.social__link_odnoklass {
+    width: 20px;
+    height: 32px;
+    background-image: url('../img/social-list/ok.svg');
+}
+
+.site-footer__bottom {
+    @include flex($jc: sb, $ai: c);
+    @media screen and (max-width: $tablet-break) {
+        justify-content: center;
+    }
+}
+
+.site-footer__title {
+    font-size: rem(18);
+    font-family: $main-font;
+    @include no-gutters;
+    font-weight: 200;
+    @media screen and (max-width: $tablet-break) {
+        order: -2;
+        margin-bottom: 10px;
+    }
+}
+
+.site-footer__contacts {
+    display: none;
+    font-style: normal;
+    @media screen and (max-width: $desktop-break) {
+        display: block;
+        width: 100%;
+    }
+    @media screen and (max-width: $tablet-break) {
+        order: -1;
+        margin-bottom: 15px;
+    }
+}
+
+.site-footer__social-xs {
+    display: none;
+    @media screen and (max-width: $tablet-break) {
+        display: flex;
+        margin-bottom: 25px;
+    }
+}
+
+.site-footer__social-md {
+    display: block;
+    @media screen and (max-width: $tablet-break) {
+        display: none;
+    }
+}
+
+.contacts__tel, .contacts__req-call {
+    @media screen and (max-width: $tablet-break) {
+        text-align: center;
+        width: 100%;
+    }
+}
